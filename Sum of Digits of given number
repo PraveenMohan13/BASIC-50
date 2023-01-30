@@ -1,0 +1,82 @@
+int main() {
+    int n,sum=0,r;
+    cin>>n;
+    while(n!=0)
+    {
+        sum=sum+n%10;
+        n=n/10;
+    }
+    cout<<sum;
+}
+-----------------------------------------
+
+------------------------------------
+int main() {
+    int n,sum;
+    cin>>n;
+    for(sum=0;n!=0;sum=sum+n%10,n/=10);
+    cout<<sum;
+}
+------------------------------------
+Sum of the digits of a given number with input as string:
+-------------------------------------------------------
+int main() {
+    string n;
+    cin>>n;
+    int sum=0;
+    for (int i = 0; i < n.length(); i++) 
+        sum = sum + n[i]-48 ;
+    cout<<sum;
+}
+
+------------------------------------
+Sum of the digits of a given number using recursion:
+------------------------------------------------------
+#include<math.h>
+int fun(int,int);
+int main() {
+    int n,sum=0;
+    cin>>n;
+    cout<<fun(n,sum);
+}
+int fun(int n,int sum)
+{
+    if(n!=0)
+    {
+       int r=n%10;
+     sum=sum+r;
+        return fun(n/10,sum);
+    }
+    return sum;
+}
+-----------------------------------------------
+int fun(int);
+int main() {
+    int n,sum;
+    cin>>n;
+    cout<<fun(n);
+}
+int fun(int n)
+{
+    if(n==0)
+        return 0;
+    return (n%10)+fun(n/10);
+}
+--------------------------------------------------------------------------------
+Sum of the digits of a given number using tail recursion:
+---------------------------------------------------------------------------------
+int sum_of_digit(int n, int val)
+{
+	if (n < 10) {
+		val = val + n;
+		return val;
+	}
+	return sum_of_digit(n / 10, (n % 10) + val);
+}
+int main()
+{
+	int num = 12345;
+	int result = sum_of_digit(num, 0);
+	cout << "Sum of digits is " << result;
+	return 0;
+}
