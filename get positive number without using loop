@@ -1,0 +1,14 @@
+#include<stdio.h>
+int main(void) {
+    int a,sum=0;
+    one:
+    scanf("%d",&a);
+    if(a>0)
+    {
+        sum+=a;
+    goto one;
+    }
+    else
+        printf("%d",sum);
+    return 0;
+}
