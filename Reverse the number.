@@ -1,0 +1,40 @@
+#include<stdio.h>
+int main()
+{
+    int n,ans=0,r;
+    scanf("%d",&n);
+    while(n)
+    {
+        r=n%10;
+        ans=ans*10+r;
+        n=n/10;
+    }
+    printf("%d",ans);
+}
+----------------------------------------------
+#include<stdio.h>
+int main()
+{
+    int n,ans=0,r;
+    scanf("%d",&n);
+    while(n)
+    {
+        r=n%10;
+        n=n/10;
+        printf("%d",r);
+    }
+   
+}
+---------------------------------------------------------
+#include<stdio.h>
+int main()
+{
+    int n,ans=0,r;
+    scanf("%d",&n);
+    while(n)
+    {
+        printf("%d",n%10);
+        n=n/10;
+    }
+   
+}
