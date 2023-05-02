@@ -1,0 +1,30 @@
+#include<stdio.h>
+int main() {
+    int n=241,a[10],i=0,r,ans=0;
+    while(n)
+    {
+        r=n%10;
+        n=n/10;
+        ans=ans+r*pow(8,i);
+        i++;
+    }
+    i=0;
+    while(ans)
+    {
+        r=ans%16;
+        a[i]=r;
+        ans=ans/16;
+        i++;
+    }
+    for(int j=i-1;j>=0;j--)
+    {
+        if(a[j]>=10&&a[j]<=15)
+        {
+            char z=a[j]+55;
+            printf("%c",z);
+        }
+        else
+            printf("%d",a[j]);
+    }
+}
+    
