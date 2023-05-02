@@ -1,10 +1,11 @@
-#include <stdio.h>
-int main() {
-  int n,ans=1,b;
-  scanf("%d %d",&n,&b);
-  for(int i=0;i<b;i++)
-      ans=ans*n;
-  printf("%d",ans);
+#include<stdio.h>
+int main()
+{
+    int l,u,ans=1;//unsigned for big
+    scanf("%d%d",&l,&u);
+    for(int i=0;i<u;i++)
+        ans=ans*l;
+    printf("%d",ans);
 }
 ------------------------------------------------------------------------------------------------------------------------------------------------
 #include <stdio.h>
