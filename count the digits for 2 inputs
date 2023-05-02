@@ -1,0 +1,18 @@
+#include<stdio.h>
+int main()
+{
+    int n1,n2,c=0;
+    scanf("%d%d",&n1,&n2);
+    while(n1!=0)
+    {
+        n1=n1/10;
+        c++;
+    }
+    while(n2!=0)
+    {
+        n2=n2/10;
+        c++;
+    }
+    printf("%d",c);
+}
+    
