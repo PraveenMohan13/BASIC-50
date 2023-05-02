@@ -24,4 +24,23 @@ int main()
     printf("%d odd numbers\n",o);
     printf("%d even numbers",e);
 }
-    
+-----------------------------------------------------------------------------------------------------  
+#include<stdio.h>
+int main() {
+    int n,c=0,r,o=0,e=0;
+    for(int i=0;i<2;i++)
+    {
+        scanf("%d",&n);
+    while(n!=0)
+    {
+        r=n%10;
+        if(r%2==0)
+            e++;
+        else
+            o++;
+        n=n/10;
+    }
+    }
+    printf("%d odd numbers\n",o);
+    printf("%d even numbers",e);
+}
