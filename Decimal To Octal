@@ -1,0 +1,13 @@
+#include<stdio.h>
+int main() {
+    int n=10,z=1,sum=0,r;
+    while(n)
+    {
+        r=n%8;
+        sum=sum+r*z;
+        z=z*10;
+        n=n/8;
+    }
+    printf("%d",sum);
+}
+    
