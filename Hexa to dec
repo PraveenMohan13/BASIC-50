@@ -1,0 +1,18 @@
+#include<stdio.h>
+int main() {
+    int a[10],i=0,p=0,t;
+    char n[]="A1";
+    int temp=strlen(n);
+    for(i=0;i<strlen(n);i++)
+    {
+        if(n[i]>='A'&&n[i]<='F')
+            t=n[i]-65+10;
+        else
+            t=n[i]-48;
+        printf("%d ",t);
+        p+=t*pow(16,temp-1);
+        temp--;
+    }
+    printf("%d",p);
+    
+}
