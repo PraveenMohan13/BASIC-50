@@ -1,0 +1,12 @@
+#include<stdio.h>
+int main() {
+    int n=100,a[10],i=0,r,ans=0;
+    while(n)
+    {
+        r=n%10;
+        n=n/10;
+        ans=ans+r*pow(8,i);
+        i++;
+    }
+    printf("%d",ans);
+}
