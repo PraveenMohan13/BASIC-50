@@ -12,7 +12,7 @@ int main() {
     {
         if(a[j]>=10&&a[j]<=15)
         {
-            char z=a[j]+55;
+            char z=a[j]+65-10;
             printf("%c",z);
         }
         else
