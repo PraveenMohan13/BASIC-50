@@ -1,0 +1,26 @@
+#include<stdio.h>
+int main() {
+   int a,r,e=0,o=0,es=0,os=0;
+    scanf("%d",&a);
+    while(a!=0)
+    {
+        r=a%10;
+        if(r%2==0)
+        {
+            es=es+r;
+            e++;
+        }
+        else
+        {
+            os=os+r;
+            o++;
+        }
+        a=a/10;
+    }
+    printf("%d even",e);
+    printf("%d odd",o);
+    printf("%d even sum",es);
+    printf("%doddsum",os);
+}
+    
+    
