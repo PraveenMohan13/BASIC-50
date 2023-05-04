@@ -1,0 +1,15 @@
+#include<stdio.h>
+int main() {
+    int n,i,key1,key2,ans=0;
+    scanf("%d",&n);
+    int a[n];
+    for(i=0;i<n;i++)
+        scanf("%d",&a[i]);
+    
+    scanf("%d",&key1);
+    scanf("%d",&key2);
+    
+    for(i=key1-1;i<key2;i++)
+        ans=ans*10+a[i];
+    printf("%d",ans);
+}
