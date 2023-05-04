@@ -1,0 +1,23 @@
+#include<stdio.h>
+
+int main() {
+  int a,b,flag=0,x,y;
+    a=67;
+    b=a*a;
+    while(a!=0 && b!=0)
+    {
+        x=a%10;
+        y=b%10;
+        if(x!=y){
+            flag=1;
+            break;
+        }
+        a=a/10;
+        b=b/10;
+        
+    }
+    if (flag==0)
+        printf("Automorphic Number");
+    else
+        printf("Not an Automorphic Number");
+}
