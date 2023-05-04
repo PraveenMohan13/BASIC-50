@@ -1,0 +1,41 @@
+2 Array
+
+#include<stdio.h>
+int main() {
+    int n,L,r,temp,i,j;
+    scanf("%d",&n);
+    int a[n],b[n];
+    for(i=0;i<n;i++)
+        scanf("%d",&a[i]);
+    i=0,j=n-1;
+    while(i<n&&j>=0)
+    {
+        b[i]=a[j];
+        j--;
+        i++;
+    }
+    for(i=0;i<n;i++)
+        printf("%d ",b[i]);
+}
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Single Array
+
+#include<stdio.h>
+int main() {
+    int n,L,r,temp,i,j;
+    scanf("%d",&n);
+    int a[n];
+    for(i=0;i<n;i++)
+        scanf("%d",&a[i]);
+    i=0,j=n-1;
+    while(i<j)
+    {
+        temp=a[i];
+        a[i]=a[j];
+        a[j]=temp;
+        j--;
+        i++;
+    }
+    for(i=0;i<n;i++)
+        printf("%d ",a[i]);
+}
