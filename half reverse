@@ -14,4 +14,26 @@ int main() {
     int fans=n*pow(10,t_half)+ans;
     printf("%d",fans);
 }
-    
+------------------------------------------------------------------------------------------------------------------
+Array    
+#include<stdio.h>
+int main() {
+    int n,L,r,temp;
+    scanf("%d",&n);
+    int a[n];
+    for(int i=0;i<n;i++)
+        scanf("%d",&a[i]);
+    int half=n/2;
+    L=half;
+    r=n-1;
+    while(L<r)
+    {
+        temp=a[L];
+        a[L]=a[r];
+        a[r]=temp;
+        L++;
+        r--;
+    }
+    for(int i=0;i<n;i++)
+        printf("%d",a[i]);
+}
