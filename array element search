@@ -1,0 +1,22 @@
+#include<stdio.h>
+int main() {
+    int n,flag=0,i;
+    scanf("%d",&n);
+    int a[n];
+    for(i=0;i<n;i++)
+        scanf("%d",&a[i]);
+    int key;
+    scanf("%d",&key);
+    for(i=0;i<n;i++)
+    {
+        if(a[i]==key)
+        {
+            flag=1;
+            break;
+        }
+    }
+    if(flag==1)
+        printf("element found");
+    else
+        printf("not fount");
+}
