@@ -1,0 +1,28 @@
+Input: n = 124
+Output: No it is not a strong number
+Explanation: 1! + 2! + 4! = 27 which is not equal to n i.e, 124
+Input: n = 145
+Output: Yes it is a strong number
+Explanation: 1! + 4! + 5! = 145
+
+
+#include<stdio.h>
+int main() {
+    int n,ans=1,fans=0,r,i;
+    scanf("%d",&n);
+    int temp=n;
+    while(n)
+    {
+        r=n%10;
+        for(i=1;i<=r;i++)
+            ans=ans*i;
+        n=n/10;
+        fans+=ans;
+        ans=1;
+    }
+    if(temp==fans)
+        printf("Strong");
+    else
+        printf("not");
+}
+   
