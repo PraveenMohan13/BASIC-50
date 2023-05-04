@@ -1,0 +1,17 @@
+#include<stdio.h>
+int main() {
+    int n=12345,ans=0,r=0;
+    int c=floor(log10(n))+1;
+    int half=(c/2)+1;
+    int t_half=half;
+    while(half)
+    {
+        r=n%10;
+        ans=ans*10+r;
+        half--;
+        n=n/10;
+    }
+    int fans=n*pow(10,t_half)+ans;
+    printf("%d",fans);
+}
+    
