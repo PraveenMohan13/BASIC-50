@@ -1,0 +1,16 @@
+#include<stdio.h>
+int main() {
+    int n,flag=0,i;
+    scanf("%d",&n);
+    int a[n];
+    for(i=0;i<n;i++)
+        scanf("%d",&a[i]);
+    int pos;
+    scanf("%d",&pos);
+    if(pos<n)
+    printf("%d",a[pos-1]);
+    else
+        printf("pos is wrong");
+}
+    
+    
