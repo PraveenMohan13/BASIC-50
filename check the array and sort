@@ -1,0 +1,58 @@
+#include<stdio.h>
+int main(){
+ int n,j,i,flag=0;
+ scanf("%d",&n);
+ int a[n];
+ for(i=0;i<n;i++)
+   scanf("%d",&a[i]);
+ for(i=0;i<n-1;i++)
+ {
+   if(a[i]>a[i+1])
+    {
+	flag=1;
+     break;
+    }
+ }
+
+ if(flag==0)
+   printf("The array is sorted\n");
+ else
+   {
+	printf("The array is unsorted\nAnd the Sorted array is\n");
+    for(i=0;i<n-1;i++)
+     {
+        for(j=i+1;j<n;j++)
+       {
+         if(a[i]>a[j]){
+	    int temp=a[i];
+        a[i]=a[j];
+        a[j]=temp;
+        }
+      }
+ }
+ }
+    for(i=0;i<n;i++) 
+        printf("%d ",a[i]);
+}
+
+ if(flag==0)
+   printf("The array is sorted\n");
+ else
+   {
+	printf("The array is unsorted\nAnd the Sorted array is\n");
+    for(i=0;i<n-1;i++)
+     {
+        for(j=i+1;j<n;j++)
+       {
+         if(a[i]>a[j])
+	{
+	 int temp=a[i];
+        a[i]=a[j];
+        a[j]=temp;
+        }
+      }
+ }
+ }
+    for(i=0;i<n;i++) 
+        printf("%d ",a[i]);
+}
