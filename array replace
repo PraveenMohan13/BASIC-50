@@ -1,0 +1,65 @@
+replace the particular key element in a array
+
+#include<stdio.h>
+int main(){
+ int n,i,e=0,o=0;
+ scanf("%d",&n);
+ int a[n];
+ for(i=0;i<n;i++)
+   scanf("%d",&a[i]);
+    
+ int key,rep;
+    scanf("%d%d",&key,&rep);
+    
+    for(i=0;i<n;i++)
+    {
+        if(a[i]==key)
+           a[i]=rep;
+    }
+    for(i=0;i<n;i++)
+        printf("%d ",a[i]);
+}
+--------------------------------------------------------------------------------------------------------------------------------
+replace the particular index element
+
+ #include<stdio.h>
+int main(){
+ int n,i,e=0,o=0;
+ scanf("%d",&n);
+ int a[n];
+ for(i=0;i<n;i++)
+   scanf("%d",&a[i]);
+    
+ int key,rep;
+    scanf("%d%d",&key,&rep);
+    
+    a[key]=rep;
+
+    for(i=0;i<n;i++)
+        printf("%d ",a[i]);
+}
+--------------------------------------------------------------------------------------------------------------------------------
+replace the particular pos element
+#include<stdio.h>
+int main(){
+ int n,i,e=0,o=0;
+ scanf("%d",&n);
+ int a[n];
+ for(i=0;i<n;i++)
+   scanf("%d",&a[i]);
+    
+ int key,rep;
+    scanf("%d%d",&key,&rep);
+    
+    a[key-1]=rep;
+    for(i=0;i<n;i++)
+        printf("%d ",a[i]);
+}
+    
+        
+        
+ 
+        
+    
+        
+    
