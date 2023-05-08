@@ -37,3 +37,35 @@ int main() {
     for(int i=0;i<n;i++)
         printf("%d",a[i]);
 }
+------------------------------------------------------------------------------------------------------------------
+front and back
+#include<stdio.h>
+int main(){
+ int n,i,l,r;
+ scanf("%d",&n);
+ int a[n];
+ for(i=0;i<n;i++)
+   scanf("%d",&a[i]);
+ int half=n/2;
+    l=half;
+    r=n-1;
+    while(l<r)
+    {
+        int temp=a[l];
+        a[l]=a[r];
+        a[r]=temp;
+        l++;
+        r--;
+    }
+    l=0,r=half-1;
+    while(l<r)
+    {
+        int temp=a[l];
+        a[l]=a[r];
+        a[r]=temp;
+        l++;
+        r--;
+    }
+    for(i=0;i<n;i++)
+        printf("%d ",a[i]);
+}
