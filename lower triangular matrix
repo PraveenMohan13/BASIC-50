@@ -1,0 +1,35 @@
+int main() {
+    int n,i,j,flag=0;
+    scanf("%d",&n);
+    int row=n;
+    int col=n;
+    int a[row][col];
+    //input
+    for(i=0;i<row;i++)
+    {
+        for(j=0;j<col;j++)
+        {
+            scanf("%d",&a[i][j]);
+        }
+    }
+    //check
+    for(i=0;i<n-1;i++)
+    {
+        for(j=i+1;j<n;j++)
+        {
+            if(a[i][j]!=0)
+            {
+                flag=1;
+                break;
+            }
+            
+        }
+    }
+    if(flag==0)
+        printf("lower triangular matrix");
+    else
+        printf("Not an lower triangular matrix");
+}
+    
+
+
