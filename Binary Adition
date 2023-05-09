@@ -1,0 +1,17 @@
+#include<stdio.h>
+
+int main() {
+    int n=1001,m=100,a[100],i=0,r=0;
+    while(n!=0||m!=0)
+    {
+        a[i++]=(n%10+m%10+r)%2;
+        r=(n%10+m%10+r)/2;
+        n=n/10;
+        m=m/10;
+    }
+    if(r!=0)
+        a[i++]=r;
+    i--;
+    for(int j=i;j>=0;j--)
+        printf("%d",a[i]);
+}
