@@ -1,0 +1,31 @@
+#include<stdio.h>
+int main() {
+    int row,col,i,j;
+    scanf("%d %d",&row,&col);
+    int a[row][col];
+     int b[row][col];
+    int ans[row][col];
+    for(i=0;i<row;i++) //a array input
+    {
+       for (j=0;j<col;j++)
+            scanf("%d",&a[i][j]);
+    }
+    for(i=0;i<row;i++)  //b array input
+    {
+       for (j=0;j<col;j++)
+            scanf("%d",&b[i][j]);
+    }
+    
+    for(i=0;i<row;i++)    // add both array
+    {
+       for (j=0;j<col;j++)
+           ans[i][j]=a[i][j]+b[i][j];
+    }
+    
+    for(i=0;i<row;i++)  //print the ans array
+    {
+       for (j=0;j<col;j++)
+        printf("%d ",ans[i][j]);
+        printf("\n");
+    }
+}
