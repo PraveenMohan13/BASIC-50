@@ -1,0 +1,66 @@
+Ravi is not able to figure out the method to calculate the sum of the Zig-Zag pattern in the Matrix. Can you help Ravi to write a program to find the sum of Zig-Zag patterns in a given matrix?
+
+Input Format
+
+Input consists of 2 integers and 1 2D array.
+Integers corresponding to the size of rows and columns.
+Constraints
+
+NA
+
+Output Format
+
+The output prints the sum of the zig-zag pattern.
+Refer to the sample output.
+Note: Size of row and column should be same
+Sample Input 0
+
+3
+3
+1 2 3
+4 5 6
+7 8 9
+Sample Output 0
+
+Sum of Zig-Zag pattern is 35
+Explanation 0
+
+The sum of zig-zag pattern is 1+2+3+5+7+8+9=35 and hence its prints 35
+
+Sample Input 1
+
+3
+3
+1 3 5
+2 4 6
+7 8 9
+Sample Output 1
+
+Sum of Zig-Zag pattern is 37
+Explanation 1
+
+The sum of zig-zag pattern is 1+3+5+4+7+8+9=37 and hence its prints 37
+-------------------------------------------------------------------------------------------------------------------------------------
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+int main() {
+int row,col,i,j,sum=0;
+    scanf("%d %d",&row,&col);
+    int a[row][col];
+    for(i=0;i<row;i++)
+        for(j=0;j<col;j++)
+            scanf("%d",&a[i][j]);
+    
+    for(i=0;i<row;i++)
+    {
+        for(j=0;j<col;j++)
+        {
+            if(i==0||i==col-1||i+j==col-1)
+                sum=sum+a[i][j];
+        }
+    }
+    printf("Sum of Zig-Zag pattern is %d",sum);
+}
+   
