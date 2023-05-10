@@ -1,0 +1,23 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <limits.h>
+int main() {
+int row,col,max=INT_MIN,i,j;
+    scanf("%d %d",&row,&col);
+    int a[row][col];
+    for(i=0;i<row;i++)
+        for(j=0;j<col;j++)
+            scanf("%d",&a[i][j]);
+    
+    for(i=0;i<row;i++)
+    {
+        for(j=0;j<col;j++)
+        {
+            if(a[i][j]>max)
+                max=a[j][i];
+        }
+        printf("%d\n",max);
+        max=INT_MIN;
+    }
+}
+   
