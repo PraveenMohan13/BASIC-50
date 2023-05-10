@@ -1,0 +1,65 @@
+Rohit likes to play with numbers. He started to frame a matrix called uniformity matrix where he will be using either completely odd numbers or completely even numbers but not both. Write a program to check whether he has framed the matrix in the correct order or not.
+
+Input Format
+
+The input consists of (n*n+1) integers.
+The first integer corresponds to the number of rows/columns in the matrix.
+The remaining integers correspond to the elements in the matrix.
+The elements are read in row-wise order, the first row first, then the second row, and so on.
+Constraints
+
+NA
+
+Output Format
+
+Print Yes if it is a uniformity matrix.
+Print No if it is not a uniformity matrix.
+Sample Input 0
+
+2
+4 5
+5 4
+Sample Output 0
+
+No
+Sample Input 1
+
+3
+2 4 6
+8 10 12
+14 16 18
+Sample Output 1
+
+Yes
+---------------------------------------------------------------------------------------------------------------------------------------
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+
+    int n,e=0,o=0,i,j;
+    scanf("%d",&n);
+    int a[n][n];
+    for(i=0;i<n;i++)
+        for(j=0;j<n;j++)
+            scanf("%d",&a[i][j]);
+    
+    for(i=0;i<n;i++)
+    {
+        for(j=0;j<n;j++)
+        {
+            if(a[i][j]%2==0)
+                e++;
+            else
+                o++;
+        }
+    }
+    
+    if(e==n*n||o==n*n)
+        printf("Yes");
+    else
+        printf("No");
+}
+        
