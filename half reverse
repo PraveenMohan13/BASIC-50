@@ -15,6 +15,71 @@ int main() {
     printf("%d",fans);
 }
 ------------------------------------------------------------------------------------------------------------------
+Need to write a program left and right half separately
+
+Input Format
+
+7
+1 2 3 4 5 6 7
+
+Constraints
+
+1<=n<=20
+
+Output Format
+
+3 2 1 4 7 6 5
+
+Sample Input 0
+
+6
+1 2 3 4 5 6
+Sample Output 0
+
+3 2 1 6 5 4
+front and back
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+
+    int n,i;
+    scanf("%d",&n);
+    int a[n];
+    for(i=0;i<n;i++)
+        scanf("%d",&a[i]);
+    int half=n/2;
+    int l=0;
+    int r=half-1;
+    while(l<r)
+    {
+        int temp=a[l];
+        a[l]=a[r];
+        a[r]=temp;
+        l++;
+        r--;
+    }
+    half=ceil(n/2.0);
+    l=half;
+    r=n-1;
+     while(l<r)
+    {
+        int temp=a[l];
+        a[l]=a[r];
+        a[r]=temp;
+        l++;
+        r--;
+    }
+    for(i=0;i<n;i++)
+        printf("%d ",a[i]);
+    
+    return 0;
+}
+
+
+------------------------------------------------------------------------------------------------------------------
 Array    
 #include<stdio.h>
 int main() {
