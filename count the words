@@ -1,0 +1,13 @@
+#include<stdio.h>
+int main() {
+    char a[100];
+    gets(a);
+   int l=strlen(a); 
+    int i,c=1;
+	for(i=0;i<l;i++)
+    {
+       if(a[i]==' ')
+           c++;
+    }
+    printf("%d",c);
+}
