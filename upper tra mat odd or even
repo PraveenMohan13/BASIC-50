@@ -1,0 +1,31 @@
+int main()
+{
+   int n,j,i,sum=0,o=0,e=0;
+   cin>>n;
+   int a[n][n];
+   for(i=0;i<n;i++)
+   {
+       for(j=0;j<n;j++)
+       cin>>a[i][j];
+   }
+   
+   for(i=1;i<n;i++)
+   {
+       for(j=0;j<i;j++)
+       {
+          sum=sum+a[i][j];
+           if(a[i][j]%2==0)
+               e++;
+           else
+               o++;
+           
+       }
+   }
+    cout<<"total "<<sum<<endl;
+    if(sum%2==0)
+        cout<<"even"<<endl;
+    else
+        cout<<"odd"<<endl;
+    cout<<o<<endl;
+    cout<<e;
+}
