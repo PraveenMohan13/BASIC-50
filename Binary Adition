@@ -13,5 +13,5 @@ int main() {
         a[i++]=r;
     i--;
     for(int j=i;j>=0;j--)
-        printf("%d",a[i]);
+        printf("%d",a[j]);
 }
