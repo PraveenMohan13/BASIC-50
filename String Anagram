@@ -1,0 +1,42 @@
+#include<stdio.h>
+#include<string.h>
+int fun(char a[],int l)
+{
+    for(int i=0;i<l-1;i++)
+    {
+        for(int j=i+1;j<l;j++)
+        {
+            if(a[i]>a[j])
+            {
+            int t=a[i];
+            a[i]=a[j];
+            a[j]=t;
+            }
+        }
+    }
+}
+int main() {
+    int f=0;
+    char a[10],b[10];
+    scanf("%s",a);
+    scanf("%s",b);
+    int l1=strlen(a);
+    int l2=strlen(b);
+    if(l1!=l2)
+    {
+        printf("not an anagram");
+        return 0;
+    }
+    fun(a,l1);
+    fun(b,l2);
+    for(int i=0;i<l2;i++)
+    {
+        if(a[i]!=b[i])
+            f=1;
+    }
+    if(f==0)
+        printf("anagram");
+    else
+        printf("not an anagram");
+    return 0;
+}
