@@ -1,0 +1,17 @@
+import java.util.Scanner;
+
+public class BinaryToOctal {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        String binaryInput = scanner.nextLine();
+        int decimalNumber = Integer.parseInt(binaryInput, 2);
+        
+        
+        System.out.println(Integer.toOctalString(decimalNumber));
+        System.out.println(Integer.toHexString(decimalNumber));
+        System.out.println(Integer.toBinaryString(decimalNumber));
+        
+        
+        scanner.close();
+    }
+}
