@@ -1,0 +1,16 @@
+
+
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        String Input = scanner.nextLine();
+        int B_2_decimal = Integer.parseInt(Input, 2);
+        int oct_2_decimal = Integer.parseInt(Input, 8);
+        int hexa_2_decimal = Integer.parseInt(Input, 16);
+        System.out.println("Binary: " + B_2_decimal);
+        System.out.println("Binary: " + oct_2_decimal);
+        System.out.println("Binary: " + hexa_2_decimal);
+        scanner.close();
+    }
+}
